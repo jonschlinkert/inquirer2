@@ -2,7 +2,7 @@ var expect = require("chai").expect;
 var sinon = require("sinon");
 var ReadlineStub = require("../../helpers/readline");
 
-var inquirer = require("../../../lib/inquirer");
+var inquirer = require("../../..")();
 var Choices = require("../../../lib/objects/choices");
 var Choice = require("../../../lib/objects/choice");
 

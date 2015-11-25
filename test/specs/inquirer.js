@@ -7,7 +7,7 @@ var expect = require("chai").expect;
 var sinon = require("sinon");
 var _ = require("lodash");
 var rx = require("rx-lite");
-var inquirer = require("../../lib/inquirer");
+var inquirer = require("../../")();
 
 describe("inquirer.prompt", function() {
 

@@ -4,7 +4,7 @@ var chalk = require("chalk");
 var ReadlineStub = require("../../helpers/readline");
 
 var Separator = require("../../../lib/objects/separator");
-var Inquirer = require("../../../lib/inquirer");
+var Inquirer = require("../../..")();
 
 describe("Separator constructor", function() {
 

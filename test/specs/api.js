@@ -7,7 +7,7 @@ var sinon = require("sinon");
 var _ = require("lodash");
 var fixtures = require("../helpers/fixtures");
 var ReadlineStub = require("../helpers/readline");
-var inquirer = require("../../lib/inquirer");
+var inquirer = require("../../")();
 
 // Define prompts and their public API
 var prompts = [
