@@ -1,17 +1,21 @@
 {
-  "name": "inquirer",
-  "description": "A collection of common interactive command line user interfaces.",
-  "version": "0.11.0",
-  "homepage": "https://github.com/SBoudrias/Inquirer.js",
-  "author": "Simon Boudrias <admin@simonboudrias.com>",
-  "repository": "SBoudrias/Inquirer.js",
+  "name": "inquirer2",
+  "description": "Lighter, faster alternative to inquirer. A collection of common interactive command line user interfaces.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jonschlinkert/inquirer2",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/inquirer2",
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/inquirer2/issues"
+  },
   "license": "MIT",
   "files": [
-    "lib"
+    "index.js",
+    "lib/"
   ],
-  "main": "lib/inquirer.js",
+  "main": "index.js",
   "scripts": {
-    "test": "grunt --verbose"
+    "test": "gulp"
   },
   "dependencies": {
     "ansi-escapes": "^1.1.0",
@@ -31,10 +35,10 @@
   "devDependencies": {
     "chai": "^3.0.0",
     "cmdify": "^0.0.4",
-    "grunt": "^0.4.1",
-    "grunt-cli": "^0.1.8",
-    "grunt-contrib-jshint": "^0.11.1",
-    "grunt-mocha-test": "^0.12.7",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.1.1",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-mocha": "^2.2.0",
     "mocha": "*",
     "mockery": "^1.4.0",
     "sinon": "^1.12.1"

@@ -1,7 +1,6 @@
 var inquirer = require('../..')();
 
 module.exports = {
-
   input: {
     message: 'message',
     name: 'name'
@@ -33,9 +32,9 @@ module.exports = {
     message: 'message',
     name: 'name',
     choices: [{
-        key: 'a',
-        name: 'acab'
-      },
+      key: 'a',
+      name: 'acab'
+    },
       new inquirer.Separator(), {
         key: 'b',
         name: 'bar'
