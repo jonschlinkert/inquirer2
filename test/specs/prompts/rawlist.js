@@ -1,5 +1,6 @@
 'use strict';
 
+var assert = require('assert');
 var expect = require('chai').expect;
 var _ = require('lodash');
 
@@ -24,12 +25,10 @@ describe('`rawlist` prompt', function() {
   });
 
   it('should select given index', function(done) {
-
     this.rawlist.run(function(answer) {
       expect(answer).to.equal('bar');
       done();
     });
-
     this.rl.emit('line', '2');
   });
 
@@ -45,7 +44,7 @@ describe('`rawlist` prompt', function() {
     setTimeout(function() {
       self.rl.emit('line', '1');
       setTimeout(function() {
-        expect(callCount).to.equal(1);
+        assert.equal(callCount, 1);
         done();
       }, 10);
     }, 10);

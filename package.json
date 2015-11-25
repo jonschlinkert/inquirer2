@@ -20,17 +20,23 @@
   "dependencies": {
     "ansi-escapes": "^1.1.0",
     "ansi-regex": "^2.0.0",
+    "arr-flatten": "^1.0.1",
+    "arr-pluck": "^0.1.0",
+    "array-unique": "^0.2.1",
     "chalk": "^1.0.0",
     "cli-cursor": "^1.0.1",
     "cli-width": "^1.0.1",
+    "extend-shallow": "^2.0.1",
     "figures": "^1.3.5",
+    "is-number": "^2.1.0",
+    "is-plain-object": "^2.0.1",
     "lazy-cache": "^0.2.4",
-    "lodash": "^3.3.1",
+    "lodash.where": "^3.1.0",
     "readline2": "^1.0.1",
     "run-async": "^0.1.0",
     "rx-lite": "^3.1.2",
-    "strip-ansi": "^3.0.0",
-    "through": "^2.3.6"
+    "strip-color": "^0.1.0",
+    "through2": "^2.0.0"
   },
   "devDependencies": {
     "chai": "^3.0.0",
@@ -39,6 +45,7 @@
     "gulp-eslint": "^1.1.1",
     "gulp-istanbul": "^0.10.3",
     "gulp-mocha": "^2.2.0",
+    "lodash": "^3.10.1",
     "mocha": "*",
     "mockery": "^1.4.0",
     "sinon": "^1.12.1"
