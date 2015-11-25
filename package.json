@@ -1,25 +1,18 @@
 {
   "name": "inquirer",
-  "version": "0.11.0",
   "description": "A collection of common interactive command line user interfaces.",
-  "main": "lib/inquirer.js",
-  "scripts": {
-    "test": "grunt --verbose"
-  },
-  "repository": "SBoudrias/Inquirer.js",
-  "keywords": [
-    "command",
-    "prompt",
-    "stdin",
-    "cli",
-    "tty",
-    "menu"
-  ],
+  "version": "0.11.0",
+  "homepage": "https://github.com/SBoudrias/Inquirer.js",
   "author": "Simon Boudrias <admin@simonboudrias.com>",
+  "repository": "SBoudrias/Inquirer.js",
   "license": "MIT",
   "files": [
     "lib"
   ],
+  "main": "lib/inquirer.js",
+  "scripts": {
+    "test": "grunt --verbose"
+  },
   "dependencies": {
     "ansi-escapes": "^1.1.0",
     "ansi-regex": "^2.0.0",
@@ -42,8 +35,21 @@
     "grunt-cli": "^0.1.8",
     "grunt-contrib-jshint": "^0.11.1",
     "grunt-mocha-test": "^0.12.7",
-    "mocha": "^2.2.1",
+    "mocha": "*",
     "mockery": "^1.4.0",
     "sinon": "^1.12.1"
+  },
+  "keywords": [
+    "cli",
+    "command",
+    "menu",
+    "prompt",
+    "stdin",
+    "tty"
+  ],
+  "verb": {
+    "related": {
+      "list": []
+    }
   }
 }

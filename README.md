@@ -1,10 +1,8 @@
-Inquirer.js
-===========
+# inquirer
 
 [![npm](https://badge.fury.io/js/inquirer.svg)](http://badge.fury.io/js/inquirer) [![tests](https://travis-ci.org/SBoudrias/Inquirer.js.svg?branch=master)](http://travis-ci.org/SBoudrias/Inquirer.js) [![dependencies](https://david-dm.org/SBoudrias/Inquirer.js.svg?theme=shields.io)](https://david-dm.org/SBoudrias/Inquirer.js)
 
-A collection of common interactive command line user interfaces.
-
+> A collection of common interactive command line user interfaces.
 
 ## Goal and Philosophy
 
@@ -26,11 +24,11 @@ A collection of common interactive command line user interfaces.
 
 ### Installation
 
-``` shell
+```sh
 npm install inquirer
 ```
 
-```javascript
+```js
 var inquirer = require("inquirer");
 inquirer.prompt([/* Pass your questions in here */], function( answers ) {
 	// Use user feedback for... whatever!!
@@ -41,7 +39,7 @@ inquirer.prompt([/* Pass your questions in here */], function( answers ) {
 ### Examples (Run it and see it)
 Checkout the `examples/` folder for code and interface examples.
 
-``` shell
+```sh
 node examples/pizza.js
 node examples/checkbox.js
 # etc...
@@ -107,6 +105,7 @@ A key/value hash containing the client answers in each prompt.
   - `rawlist`, `list` : Selected choice value (or name if no value specified) (String)
 
 ### Separator
+
 A separator can be added to any `choices` array:
 
 ```
@@ -117,7 +116,7 @@ choices: [ "Choice A", new inquirer.Separator(), "choice B" ]
 [?] What do you want to do?
  > Order a pizza
    Make a reservation
-   --------
+   -------
    Ask opening hours
    Talk to the receptionist
 ```
@@ -126,8 +125,7 @@ The constructor takes a facultative `String` value that'll be use as the separat
 
 Separator instances have a property `type` equal to `separator`. This should allow tools façading Inquirer interface from detecting separator types in lists.
 
-Prompts type
----------------------
+### Prompts type
 
 > **Note:**: _allowed options written inside square brackets (`[]`) are optional. Others are required._
 
@@ -138,7 +136,7 @@ default must be the choice `index` in the array or a choice `value`)
 
 ![List prompt](https://dl.dropboxusercontent.com/u/59696254/inquirer/list-prompt.png)
 
----
+***
 
 #### Raw List - `{ type: "rawlist" }`
 
@@ -147,7 +145,7 @@ default must the choice `index` in the array)
 
 ![Raw list prompt](https://i.cloudup.com/LcRGpXI0CX-3000x3000.png)
 
----
+***
 
 #### Expand - `{ type: "expand" }`
 
@@ -161,7 +159,7 @@ See `examples/expand.js` for a running example.
 ![Expand prompt closed](https://dl.dropboxusercontent.com/u/59696254/inquirer/expand-prompt-1.png)
 ![Expand prompt expanded](https://dl.dropboxusercontent.com/u/59696254/inquirer/expand-prompt-2.png)
 
----
+***
 
 #### Checkbox - `{ type: "checkbox" }`
 
@@ -173,7 +171,7 @@ Choices whose property `disabled` is truthy will be unselectable. If `disabled` 
 
 ![Checkbox prompt](https://dl.dropboxusercontent.com/u/59696254/inquirer/checkbox-prompt.png)
 
----
+***
 
 #### Confirm - `{ type: "confirm" }`
 
@@ -181,7 +179,7 @@ Take `type`, `name`, `message`[, `default`] properties. `default` is expected to
 
 ![Confirm prompt](https://dl.dropboxusercontent.com/u/59696254/inquirer/confirm-prompt.png)
 
----
+***
 
 #### Input - `{ type: "input" }`
 
@@ -189,7 +187,7 @@ Take `type`, `name`, `message`[, `default`, `filter`, `validate`] properties.
 
 ![Input prompt](https://dl.dropboxusercontent.com/u/59696254/inquirer/input-prompt.png)
 
----
+***
 
 #### Password - `{ type: "password" }`
 
@@ -205,7 +203,7 @@ Along with the prompts, Inquirer offers some basic text UI.
 
 This UI present a fixed text at the bottom of a free text zone. This is useful to keep a message to the bottom of the screen while outputting command outputs on the higher section.
 
-```javascript
+```js
 var ui = new inquirer.ui.BottomBar();
 
 // pipe a Stream to the log zone
