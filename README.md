@@ -25,7 +25,7 @@
 ### Installation
 
 ```sh
-npm install inquirer
+npm install inquirer2
 ```
 
 ```js
