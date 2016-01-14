@@ -4,7 +4,7 @@
  * Expose `inquirer`
  */
 
-module.exports = function (options) {
+module.exports = function(options) {
   var inquirer = {};
 
   /**
@@ -22,8 +22,8 @@ module.exports = function (options) {
    * Create a new self-contained prompt module.
    */
 
-  inquirer.createPromptModule = function (opts) {
-    var promptModule = function (questions, allDone) {
+  inquirer.createPromptModule = function(opts) {
+    var promptModule = function(questions, allDone) {
       var ui = new inquirer.ui.Prompt(promptModule.prompts, opts);
       ui.run(questions, allDone);
       return ui;
@@ -38,7 +38,7 @@ module.exports = function (options) {
      * @return {inquirer}
      */
 
-    promptModule.registerPrompt = function (name, prompt) {
+    promptModule.registerPrompt = function(name, prompt) {
       promptModule.prompts[name] = prompt;
       return this;
     };
@@ -47,7 +47,7 @@ module.exports = function (options) {
      * Register the defaults provider prompts
      */
 
-    promptModule.restoreDefaultPrompts = function () {
+    promptModule.restoreDefaultPrompts = function() {
       this.registerPrompt('checkbox', require('./lib/prompts/checkbox'));
       this.registerPrompt('confirm', require('./lib/prompts/confirm'));
       this.registerPrompt('expand', require('./lib/prompts/expand'));
@@ -71,11 +71,11 @@ module.exports = function (options) {
   inquirer.prompt = inquirer.createPromptModule(options);
 
   // Expose helper functions on the top level for easiest usage by common users
-  inquirer.registerPrompt = function (name, prompt) {
+  inquirer.registerPrompt = function(name, prompt) {
     inquirer.prompt.registerPrompt(name, prompt);
   };
 
-  inquirer.restoreDefaultPrompts = function () {
+  inquirer.restoreDefaultPrompts = function() {
     inquirer.prompt.restoreDefaultPrompts();
   };
 
