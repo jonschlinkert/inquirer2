@@ -1,3 +1,5 @@
+'use strict';
+
 var mockery = require('mockery');
 var ReadlineStub = require('./helpers/readline');
 
