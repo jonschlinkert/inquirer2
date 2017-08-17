@@ -1,3 +1,3 @@
 DEPRECATED 
 
-Please use @enquirer instead.
+Please use [@enquirer](https://github.com/enquirer) instead.
